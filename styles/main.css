@@ -1,0 +1,176 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  background-color: #182029;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* General Classes */
+.flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.p--1 {
+  padding: 1rem;
+}
+
+.p--2 {
+  padding: 2rem;
+}
+.p-inline--2 {
+  padding-inline: 2rem;
+}
+
+.mb--1 {
+  margin-bottom: 1rem;
+}
+.mb--2 {
+  margin-bottom: 2rem;
+}
+
+.m--1 {
+  margin: 1rem;
+}
+
+.header {
+  margin-block: 1.25rem;
+  padding: 0.625rem;
+}
+
+.header .logoImage {
+  height: 40px;
+}
+
+.seriesSection .seriesPoster img {
+  border-radius: 1rem;
+  max-width: 100%;
+}
+
+.seriesDetails {
+  padding-inline-start: 0;
+}
+.seriesDetails .seriesHeading {
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.seriesDetails .seriesBrief {
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.seriesDetails .seriesBrief::after {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 1px;
+  bottom: -25px;
+  left: 0;
+  background-color: #a5a5a5;
+}
+
+.episode {
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #a5a5a5;
+}
+
+.episode:last-child {
+  border: none;
+}
+
+.episodeNumber {
+  width: 40px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.episodeImage {
+  max-width: 300px;
+}
+
+.episodeImage img {
+  width: 100%;
+  border-radius: 0.5rem;
+  /* margin-right: 1rem; */
+}
+
+.episode .details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.episode .details h3 {
+  margin-bottom: 2rem;
+}
+
+.episode .details p {
+  display: block;
+  max-width: 600px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.suggestions-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.suggestions .card img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+@media screen and (max-width: 700px) {
+  .p-inline--2 {
+    padding: 1rem;
+  }
+  .seriesDetails .seriesHeading {
+    margin-block-start: 1rem;
+    font-size: 2rem;
+  }
+
+  .episode {
+    flex-direction: column;
+    align-items: center;
+  }
+  .episodeNumber {
+    display: none;
+  }
+
+  .details {
+    align-items: center;
+  }
+  .suggestions {
+    padding: 0.5rem;
+  }
+  .suggestions-cards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
